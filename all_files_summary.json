@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend entry point with no implemented logic.",
+  "feature_evidence.json": "Feature evidence report mapping implemented features (design system, floating hearts, music toggle, etc.) to their source files, components, test IDs, and confidence levels.",
+  "frontend-file-summaries.txt": "JSON document containing one-sentence descriptions of each frontend source file, serving as a reference summary for the project's frontend architecture.",
+  "frontend/index.css": "Base Tailwind CSS file defining shadcn/ui OKLCH CSS custom properties for light and dark themes including colors, borders, and sidebar tokens.",
+  "frontend/index.html": "HTML entry point titled 'To My Beautiful Wife, Taibaa' that preloads Google Fonts (Cormorant Garamond, Great Vibes, Dancing Script) and mounts the React app.",
+  "frontend/src/App.tsx": "Root React component that composes all seven page sections with fixed FloatingHearts and MusicToggle overlays, plus a branded caffeine.ai footer.",
+  "frontend/src/components/ApologySection.tsx": "Scroll-triggered apology section with a beige/blush gradient background, italic serif apology text, decorative heart watermark, and Intersection Observer fade-in animation.",
+  "frontend/src/components/DinnerInvitation.tsx": "Dinner invitation section with date/location details, a 'Yes' button that triggers a radial heart burst animation, and a forgiveness button that reveals an inline message.",
+  "frontend/src/components/FinalSection.tsx": "Renders the closing section of the page with a pulsing background heart, glow rings, and a fade-in message declaring love for Taibaa, using IntersectionObserver to trigger the animation on scroll.",
+  "frontend/src/components/FloatingHearts.tsx": "Renders 25 randomly positioned heart emoji particles fixed to the viewport that continuously float upward via a CSS animation, serving as a decorative background layer.",
+  "frontend/src/components/HeroSection.tsx": "Displays the full-screen hero section with a candlelight background image, animated title and subtitle addressed to Taibaa, and a button that smooth-scrolls to the apology section.",
+  "frontend/src/components/LoveLetterSection.tsx": "Shows a styled love letter from Zeeshan to Taibaa over a blurred rose background, with a glassmorphism card containing italic poetic text, revealed via IntersectionObserver fade-in animation.",
+  "frontend/src/components/MemoriesGallery.tsx": "Renders a grid of 8 placeholder memory cards with hover effects that flip from a photo-upload prompt to a romantic caption overlay, intended for personal photos to be added later.",
+  "frontend/src/components/MusicToggle.tsx": "Provides a fixed-position play/pause button that controls a looping ambient piano audio track from Bensound, with visual hover effects using Lucide icons.",
+  "frontend/src/components/ShayariSection.tsx": "Displays four Urdu shayari (poetry) cards with staggered scroll-triggered fade-in animations, separated by decorative rose ornaments, using Great Vibes cursive font for the verse text.",
+  "frontend/src/hooks/useActor.ts": "Custom React hook that creates and caches an ICP backend actor using React Query, supporting both anonymous and authenticated (Internet Identity) actors, and invalidates dependent queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an InternetIdentityProvider context and useInternetIdentity hook for managing ICP Internet Identity authentication, including login, logout, and identity persistence via AuthClient.",
+  "frontend/src/index.css": "Global stylesheet defining a romantic design system with custom CSS properties (maroon, blush, gold, beige palette), Tailwind base/utilities, Google Fonts imports, and keyframe animations for floating hearts and glowing effects.",
+  "frontend/src/main.tsx": "React app entry point that mounts the root component wrapped with QueryClientProvider and InternetIdentityProvider.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the theme with romantic color tokens (maroon, blush, gold, beige), custom fonts (Cormorant Garamond, Great Vibes, Dancing Script), glow box-shadows, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Project state manifest describing a luxury romantic single-page website for a personal apology and dinner invitation, tracking implemented features, architectural notes, image requirements, and design specifications."
+}

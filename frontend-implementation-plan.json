@@ -1,0 +1,246 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Luxury Romantic One-Page Website for Taibaa Zeeshan",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement a global design system with deep maroon, blush pink, champagne gold, and soft beige color palette, serif and handwritten script fonts, glowing effects, smooth scroll, and mobile-first responsive layout",
+      "acceptanceCriteria": [
+        "All six sections use only the defined color palette.",
+        "Headings render in the serif font; accent/script text renders in the handwritten font.",
+        "Smooth scroll is active when clicking anchor links.",
+        "Layout is fully usable on 375px mobile screens."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add CSS custom properties for the color palette (--maroon: #6B1A2A, --blush: #F4B8C1, --gold: #D4AF6A, --beige: #F9F0E6), import Google Fonts (Cormorant Garamond for headings and Dancing Script or Great Vibes for accent text), define global utilities for soft glowing effects using box-shadow and text-shadow, and set smooth scroll behavior on the html element"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend the Tailwind theme to include custom colors (maroon, blush, gold, beige) matching the CSS custom properties, configure font families for serif (Cormorant Garamond) and script (Dancing Script), and ensure mobile-first responsive breakpoints are properly configured"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement floating heart particles across the entire page with 20–30 hearts floating upward at random positions, sizes, opacities, and durations using CSS keyframe animations",
+      "acceptanceCriteria": [
+        "Hearts are visible floating upward on all sections.",
+        "Hearts do not intercept clicks on buttons or links.",
+        "Animation is smooth at 60fps on mobile."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FloatingHearts.tsx",
+          "operation": "create",
+          "description": "Create a React component that renders 20–30 heart symbols (❤ or SVG hearts) with random horizontal positions, sizes (8–20px), opacities (0.3–0.7), and animation durations (6–14s). Use CSS keyframe animations for upward floating motion. The component container must be position:fixed, pointer-events:none, z-index:0, and cover the full viewport"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the FloatingHearts component at the root level of the App so it appears across all sections"
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement a romantic background music toggle button fixed in the top-right corner with play/pause functionality and autoplay policy compliance",
+      "acceptanceCriteria": [
+        "Music toggle button is always visible (fixed position).",
+        "Audio does not autoplay without user interaction.",
+        "Icon correctly reflects play/pause state.",
+        "Music loops continuously once started."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MusicToggle.tsx",
+          "operation": "create",
+          "description": "Create a React component with a fixed position button in the top-right corner. Use an HTML audio element with a royalty-free looping ambient/instrumental track (hosted URL or bundled asset). Display a musical note icon (♪) when paused and a pause icon when playing. Toggle play/pause on click. Audio must be muted by default (no autoplay). Style the button with champagne gold border and blush pink background using the design system colors"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the MusicToggle component at the root level so it remains fixed across the page"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement a Hero Section with generated candlelight background image, dark overlay, large heading, subheading, CTA button with smooth scroll, and entrance animation",
+      "acceptanceCriteria": [
+        "Hero section fills 100vh.",
+        "Heading and subheading are legible against the background.",
+        "'Open My Heart' button scrolls to the Apology section.",
+        "Entrance animation plays once on load."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create a full-viewport (100vh) Hero Section component. Use the generated image at frontend/public/assets/generated/hero-candlelight.dim_1920x1080.jpg as a full-bleed background with a dark rgba maroon overlay (~0.5 opacity). Display the heading 'To My Beautiful Wife, Taibaa ❤️' in serif font (Cormorant Garamond) with champagne gold color and soft glow. Display the subheading 'This is not just a website… This is Zeeshan's heart speaking.' in script font (Dancing Script) in blush pink. Include a CTA button labeled 'Open My Heart' that smooth-scrolls to the Apology section (use scrollIntoView). Add fade-up entrance animation on load using CSS animations or Framer Motion"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the HeroSection component as the first section in the page layout"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement an Apology Section with soft beige/blush gradient background, title, full apology paragraph, and scroll-triggered fade-in animation",
+      "acceptanceCriteria": [
+        "Text is not visible until scrolled into the viewport.",
+        "Fade-in animation triggers once when section enters view.",
+        "Full apology text matches the specified copy exactly."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ApologySection.tsx",
+          "operation": "create",
+          "description": "Create an Apology Section component with a soft beige/blush gradient background. Display the title 'I Am Truly Sorry, Taibaa' in serif font with deep maroon color. Display the full apology paragraph exactly: 'My love, I know I have made mistakes. Some were out of immaturity, some unknowingly, but never out of lack of love. If my words ever hurt you, if my silence ever made you feel alone, if my actions ever caused you pain — I am deeply, sincerely sorry. You deserved better understanding from me. And I promise to become that better man for you.' Implement fade-in slide-up animation triggered by Intersection Observer when the section scrolls into view"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the ApologySection component with an id or ref that the Hero CTA button can target for smooth scrolling"
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Implement a Memories Gallery Section with 8 placeholder cards in a responsive grid, hover overlays with romantic captions, and smooth transitions",
+      "acceptanceCriteria": [
+        "8 placeholder cards are displayed in a grid.",
+        "Hover effect shows caption overlay with smooth transition.",
+        "Grid is 2 columns on mobile and 4 columns on desktop.",
+        "Each card has its labeled placeholder text visible before hover."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MemoriesGallery.tsx",
+          "operation": "create",
+          "description": "Create a Memories Gallery Section component titled 'Our Story, Our Moments'. Display 8 placeholder cards in a responsive grid (2 columns on mobile, 4 on desktop). Each card has a soft beige/gold bordered frame and labeled placeholder text: 'Upload Photo 1', 'Upload Our Selfie', 'Upload Wedding/Engagement Memory', 'Upload Favorite Memory Together', 'Upload Memory 5', 'Upload Memory 6', 'Upload Memory 7', 'Upload Memory 8'. On hover, overlay a semi-transparent deep maroon layer and display one of these captions in script font: 'The day I realized you are my forever.', 'Your smile, my peace.', 'Our laughter, my favorite sound.', 'The world feels right when I am with you.', 'Every moment with you is priceless.' (cycle through captions). Use smooth CSS transitions for hover effects"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the MemoriesGallery component in the page layout after the Apology section"
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Implement a Love Letter Section with soft rose-blur background, elegant centered layout, exact love letter text, and fade-in scroll animation",
+      "acceptanceCriteria": [
+        "Love letter text matches specified copy exactly.",
+        "Background has a soft rose/blur aesthetic.",
+        "Section fades in on scroll.",
+        "Typography is elegant and readable."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LoveLetterSection.tsx",
+          "operation": "create",
+          "description": "Create a Love Letter Section component titled 'From Zeeshan to Taibaa' in serif font with champagne gold. Use the generated image at frontend/public/assets/generated/rose-bg.dim_1920x1080.jpg as background with optional CSS backdrop-filter blur and rose/blush gradient overlay. Display the love letter text exactly: 'Taibaa, / You are my calm in chaos. / My strength when I feel weak. / My home in this restless world. / Life feels incomplete without your smile. / Even in my flaws, my heart has only loved you. / I don't want perfection. / I want us — growing, learning, forgiving, together. / I choose you today. / I choose you tomorrow. / I will choose you for the rest of my life.' Use script font for the body and serif for the title. Center the layout with generous line spacing. Apply fade-in animation triggered by Intersection Observer on scroll"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the LoveLetterSection component in the page layout after the Memories Gallery"
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Implement a Shayari & Love Quotes Section with four Urdu/Hindi quotes, sequential animated text reveal, elegant typography, and decorative dividers",
+      "acceptanceCriteria": [
+        "All four shayari quotes are displayed verbatim.",
+        "Quotes animate in sequentially on scroll.",
+        "Typography is large and elegant.",
+        "Decorative dividers appear between quotes."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ShayariSection.tsx",
+          "operation": "create",
+          "description": "Create a Shayari & Love Quotes Section component. Display the four Urdu/Hindi quotes in large elegant typography: (1) 'Tum meri duaon ka sabse haseen jawab ho, Tum meri zindagi ka sabse khoobsurat khwaab ho.' (2) 'Galtiyan meri thi, saza tumne sahi, Mohabbat meri kam nahi thi, bas samajh kam thi.' (3) 'Tum ho toh sab kuch hai, Tum nahi toh kuch bhi nahi.' (4) 'Teri muskurahat meri duniya hai, Tera saath meri jannat hai.' Style each in script font with champagne gold on deep maroon background. Use Intersection Observer to trigger sequential fade-in animations (staggered timing). Add decorative rose or ornament dividers between quotes"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the ShayariSection component in the page layout after the Love Letter section"
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Implement a Dinner Invitation Section with date, location, animated 'Yes ❤️' button with celebratory animation, 'I Already Forgive You' button with inline message, and fade-in scroll animation",
+      "acceptanceCriteria": [
+        "Date 28/03/2026 and location Nagpur are clearly displayed.",
+        "'Yes ❤️' button triggers a heart burst/celebratory animation on click.",
+        "'I Already Forgive You' button shows an inline sweet response message.",
+        "Section fades in on scroll."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/DinnerInvitation.tsx",
+          "operation": "create",
+          "description": "Create a Dinner Invitation Section component titled 'Will You Go On A Date With Me Again?' in serif font. Display the invitation text: 'Let's begin again. Just you and me. No ego. No misunderstandings. Only love.' Display the date '28/03/2026' with a calendar icon and location 'Nagpur' with a location pin icon, both styled in champagne gold. Include an animated 'Yes ❤️' button that triggers a celebratory heart burst animation on click (use CSS animations or a particles library). Include a secondary ghost/outline-styled button labeled 'I Already Forgive You' that shows the inline message 'That means everything to me. ❤️' when clicked. Apply fade-in scroll animation using Intersection Observer"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the DinnerInvitation component in the page layout after the Shayari section"
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Implement a Final Section with glowing pulsing text, signature, soft heart glow animation, and deep dark background for dramatic contrast",
+      "acceptanceCriteria": [
+        "Glowing text animation pulses continuously.",
+        "Large heart glow is visible in the background.",
+        "'Forever Yours, Zeeshan Khan ❤️' is displayed below the main heading.",
+        "Section has high visual impact with deep dark background."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FinalSection.tsx",
+          "operation": "create",
+          "description": "Create a Final Section component with a near-black or very deep maroon background. Display the large centered text 'Taibaa, I Choose You. Again. Every Single Day.' in serif font with champagne gold color and a pulsing glow CSS animation (text-shadow cycling through gold tones using keyframes). Below it display 'Forever Yours, / Zeeshan Khan ❤️' in script font in blush pink. Add a large semi-transparent heart graphic (SVG or emoji) in the background that pulses with a glowing aura in deep maroon/blush tones using CSS animations"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the FinalSection component as the last section in the page layout"
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Render all generated static image assets from frontend/public/assets/generated in the appropriate sections",
+      "acceptanceCriteria": [
+        "Hero background uses hero-candlelight.dim_1920x1080.jpg.",
+        "Love Letter section background uses rose-bg.dim_1920x1080.jpg.",
+        "Images are served from frontend/public/assets/generated."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Ensure the Hero section background image references the exact workspace path frontend/public/assets/generated/hero-candlelight.dim_1920x1080.jpg"
+        },
+        {
+          "path": "frontend/src/components/LoveLetterSection.tsx",
+          "operation": "modify",
+          "description": "Ensure the Love Letter section background image references the exact workspace path frontend/public/assets/generated/rose-bg.dim_1920x1080.jpg"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Luxury romantic one-page website dedicated to Taibaa Zeeshan from her husband Zeeshan Khan. Purpose: sincere apology, expression of unconditional love, and a romantic dinner date invitation on 28/03/2026 in Nagpur. Design is emotional, elegant, and deeply loving with deep maroon, blush pink, champagne gold, and soft beige palette.",
+  "architectural_notes": [
+    "Single-page HTML/CSS/JS website, mobile-first responsive",
+    "Music toggle requires an audio element with autoplay policy handling"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Warm romantic candlelit dinner table scene with golden fairy lights bokeh, deep maroon and gold tones, cinematic soft glow atmosphere (hero-candlelight.dim_1920x1080.jpg)\n- Soft blurred rose petals scattered on a warm beige surface with gentle pink and gold light leaks (rose-bg.dim_1920x1080.jpg)",
+  "existing_features": [
+    {
+      "id": "feature-implement-a-global-design-system-with-the-following-color-palette-of-deep-maroon-6b1a2a-blush-pink-f4b8c1-champagne-gold-d4af6a-and-soft-beige-f9f0e6-google-fonts-pairing-of-a-serif-font-e-g-cormorant-garamond-for-headings-and-a-handwritten-script-font-e-g-dancing-script-or-great-vibes-for-accent-text-css-custom-properties-for-all-palette-colors-global-soft-glowing-light-effects-using-box-shadow-and-text-shadow-utilities-smooth-scroll-behavior-on-the-html-element-mobile-first-responsive-layout",
+      "title": "Implement a global design system with the following: color palette of deep maroon (#6B1A2A), blush pink (#F4B8C1), champagne gold (#D4AF6A), and soft beige (#F9F0E6); Google Fonts pairing of a serif font (e.g., Cormorant Garamond) for headings and a handwritten script font (e.g., Dancing Script or Great Vibes) for accent text; CSS custom properties for all palette colors; global soft glowing light effects using box-shadow and text-shadow utilities; smooth scroll behavior on the HTML element; mobile-first responsive layout.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-react-component-for-floating-heart-particles-across-the-entire-page-render-20-30-small-heart-symbols-or-svg-hearts-that-float-upward-slowly-at-random-horizontal-positions-with-varying-sizes-8-20px-opacities-0-3-0-7-and-animation-durations-6-14s-hearts-should-loop-infinitely-use-css-keyframe-animations-the-particle-layer-must-be-position-fixed-pointer-events-none-and-z-index-0-so-it-never-blocks-interactions",
+      "title": "Implement a React component for floating heart particles across the entire page. Render 20–30 small heart symbols (❤ or SVG hearts) that float upward slowly at random horizontal positions with varying sizes (8–20px), opacities (0.3–0.7), and animation durations (6–14s). Hearts should loop infinitely. Use CSS keyframe animations. The particle layer must be position:fixed, pointer-events:none, and z-index:0 so it never blocks interactions.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-romantic-background-music-toggle-button-fixed-in-the-top-right-corner-use-a-freely-licensed-looping-ambient-instrumental-audio-file-royalty-free-url-or-bundled-asset-the-button-displays-a-musical-note-icon-when-paused-and-a-pause-icon-when-playing-clicking-it-toggles-play-pause-of-the-audio-audio-must-be-muted-by-default-on-page-load-autoplay-policy-compliance-user-must-click-to-start-style-the-button-with-champagne-gold-border-and-blush-pink-background",
+      "title": "Implement a romantic background music toggle button fixed in the top-right corner. Use a freely licensed looping ambient/instrumental audio file (royalty-free URL or bundled asset). The button displays a musical note icon (♪) when paused and a pause icon when playing. Clicking it toggles play/pause of the audio. Audio must be muted by default on page load (autoplay policy compliance); user must click to start. Style the button with champagne gold border and blush pink background.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-hero-section-as-the-first-full-viewport-section-use-the-generated-hero-background-image-hero-candlelight-dim-1920x1080-jpg-as-a-full-bleed-background-with-a-dark-overlay-rgba-maroon-0-5-opacity-display-the-large-heading-to-my-beautiful-wife-taibaa-in-the-serif-font-with-champagne-gold-color-and-a-soft-glow-display-the-subheading-this-is-not-just-a-website-this-is-zeeshan-s-heart-speaking-in-the-script-font-in-blush-pink-include-a-styled-cta-button-labeled-open-my-heart-that-smooth-scrolls-to-the-apology-section-add-a-subtle-entrance-animation-fade-up-on-page-load-for-the-heading-and-subheading",
+      "title": "Implement a Hero Section as the first full-viewport section. Use the generated hero background image (hero-candlelight.dim_1920x1080.jpg) as a full-bleed background with a dark overlay (rgba maroon ~0.5 opacity). Display the large heading 'To My Beautiful Wife, Taibaa ❤️' in the serif font with champagne gold color and a soft glow. Display the subheading 'This is not just a website… This is Zeeshan's heart speaking.' in the script font in blush pink. Include a styled CTA button labeled 'Open My Heart' that smooth-scrolls to the Apology section. Add a subtle entrance animation (fade-up) on page load for the heading and subheading.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-apology-section-with-a-soft-beige-blush-gradient-background-display-the-title-i-am-truly-sorry-taibaa-in-the-serif-font-with-deep-maroon-color-display-the-full-apology-paragraph-exactly-as-specified-my-love-i-know-i-have-made-mistakes-some-were-out-of-immaturity-some-unknowingly-but-never-out-of-lack-of-love-if-my-words-ever-hurt-you-if-my-silence-ever-made-you-feel-alone-if-my-actions-ever-caused-you-pain-i-am-deeply-sincerely-sorry-you-deserved-better-understanding-from-me-and-i-promise-to-become-that-better-man-for-you-apply-a-fade-in-scroll-triggered-animation-using-intersection-observer-so-the-text-fades-and-slides-up-into-view-as-the-user-scrolls-down",
+      "title": "Implement an Apology Section with a soft beige/blush gradient background. Display the title 'I Am Truly Sorry, Taibaa' in the serif font with deep maroon color. Display the full apology paragraph exactly as specified: 'My love, I know I have made mistakes. Some were out of immaturity, some unknowingly, but never out of lack of love. If my words ever hurt you, if my silence ever made you feel alone, if my actions ever caused you pain — I am deeply, sincerely sorry. You deserved better understanding from me. And I promise to become that better man for you.' Apply a fade-in scroll-triggered animation (using Intersection Observer) so the text fades and slides up into view as the user scrolls down.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-memories-gallery-section-titled-our-story-our-moments-display-an-8-item-responsive-grid-2-columns-on-mobile-4-on-desktop-each-grid-item-is-a-placeholder-card-with-a-soft-beige-gold-bordered-frame-a-labeled-placeholder-text-e-g-upload-photo-1-upload-our-selfie-upload-wedding-engagement-memory-upload-favorite-memory-together-with-the-remaining-4-labeled-upload-memory-5-8-on-hover-overlay-a-semi-transparent-deep-maroon-layer-and-display-a-romantic-caption-in-script-font-captions-to-use-cycle-through-the-day-i-realized-you-are-my-forever-your-smile-my-peace-our-laughter-my-favorite-sound-the-world-feels-right-when-i-am-with-you-every-moment-with-you-is-priceless-apply-smooth-css-hover-transitions",
+      "title": "Implement a Memories Gallery Section titled 'Our Story, Our Moments'. Display an 8-item responsive grid (2 columns on mobile, 4 on desktop). Each grid item is a placeholder card with a soft beige/gold bordered frame, a labeled placeholder text (e.g., 'Upload Photo 1', 'Upload Our Selfie', 'Upload Wedding/Engagement Memory', 'Upload Favorite Memory Together', with the remaining 4 labeled 'Upload Memory 5–8'). On hover, overlay a semi-transparent deep maroon layer and display a romantic caption in script font. Captions to use (cycle through): 'The day I realized you are my forever.', 'Your smile, my peace.', 'Our laughter, my favorite sound.', 'The world feels right when I am with you.', 'Every moment with you is priceless.' Apply smooth CSS hover transitions.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-love-letter-section-titled-from-zeeshan-to-taibaa-in-the-serif-font-with-champagne-gold-apply-a-soft-rose-blur-background-css-backdrop-filter-blur-rose-blush-gradient-overlay-or-use-generated-rose-bg-dim-1920x1080-jpg-display-the-love-letter-text-exactly-as-specified-in-an-elegant-centered-layout-with-generous-line-spacing-in-the-script-font-for-the-body-and-serif-for-the-title-taibaa-you-are-my-calm-in-chaos-my-strength-when-i-feel-weak-my-home-in-this-restless-world-life-feels-incomplete-without-your-smile-even-in-my-flaws-my-heart-has-only-loved-you-i-don-t-want-perfection-i-want-us-growing-learning-forgiving-together-i-choose-you-today-i-choose-you-tomorrow-i-will-choose-you-for-the-rest-of-my-life-apply-fade-in-scroll-animation",
+      "title": "Implement a Love Letter Section titled 'From Zeeshan to Taibaa' in the serif font with champagne gold. Apply a soft rose-blur background (CSS backdrop-filter blur + rose/blush gradient overlay, or use generated rose-bg.dim_1920x1080.jpg). Display the love letter text exactly as specified in an elegant centered layout with generous line spacing, in the script font for the body and serif for the title: 'Taibaa, / You are my calm in chaos. / My strength when I feel weak. / My home in this restless world. / Life feels incomplete without your smile. / Even in my flaws, my heart has only loved you. / I don't want perfection. / I want us — growing, learning, forgiving, together. / I choose you today. / I choose you tomorrow. / I will choose you for the rest of my life.' Apply fade-in scroll animation.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-shayari-love-quotes-section-display-the-four-urdu-hindi-shayari-quotes-in-large-elegant-typography-with-animated-text-reveal-each-quote-fades-in-sequentially-as-the-section-scrolls-into-view-using-intersection-observer-quotes-to-display-verbatim-1-tum-meri-duaon-ka-sabse-haseen-jawab-ho-tum-meri-zindagi-ka-sabse-khoobsurat-khwaab-ho-2-galtiyan-meri-thi-saza-tumne-sahi-mohabbat-meri-kam-nahi-thi-bas-samajh-kam-thi-3-tum-ho-toh-sab-kuch-hai-tum-nahi-toh-kuch-bhi-nahi-4-teri-muskurahat-meri-duniya-hai-tera-saath-meri-jannat-hai-style-each-quote-in-the-script-font-in-champagne-gold-on-a-deep-maroon-background-add-a-decorative-rose-or-ornament-divider-between-quotes",
+      "title": "Implement a Shayari & Love Quotes Section. Display the four Urdu/Hindi shayari quotes in large, elegant typography with animated text reveal (each quote fades in sequentially as the section scrolls into view using Intersection Observer). Quotes to display verbatim: (1) 'Tum meri duaon ka sabse haseen jawab ho, Tum meri zindagi ka sabse khoobsurat khwaab ho.' (2) 'Galtiyan meri thi, saza tumne sahi, Mohabbat meri kam nahi thi, bas samajh kam thi.' (3) 'Tum ho toh sab kuch hai, Tum nahi toh kuch bhi nahi.' (4) 'Teri muskurahat meri duniya hai, Tera saath meri jannat hai.' Style each quote in the script font in champagne gold on a deep maroon background. Add a decorative rose or ornament divider between quotes.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-dinner-invitation-section-titled-will-you-go-on-a-date-with-me-again-in-the-serif-font-display-the-invitation-text-let-s-begin-again-just-you-and-me-no-ego-no-misunderstandings-only-love-show-the-date-28-03-2026-and-location-nagpur-each-with-an-icon-calendar-and-location-pin-respectively-styled-in-champagne-gold-include-an-animated-yes-button-that-when-clicked-triggers-a-celebratory-animation-e-g-burst-of-hearts-or-confetti-style-hearts-from-the-button-include-a-secondary-i-already-forgive-you-button-styled-more-subtly-ghost-outline-style-that-when-clicked-shows-a-sweet-inline-message-like-that-means-everything-to-me-apply-fade-in-scroll-animation-to-the-section",
+      "title": "Implement a Dinner Invitation Section titled 'Will You Go On A Date With Me Again?' in the serif font. Display the invitation text: 'Let's begin again. Just you and me. No ego. No misunderstandings. Only love.' Show the date '28/03/2026' and location 'Nagpur' each with an icon (calendar and location pin respectively) styled in champagne gold. Include an animated 'Yes ❤️' button that, when clicked, triggers a celebratory animation (e.g., burst of hearts or confetti-style hearts from the button). Include a secondary 'I Already Forgive You' button styled more subtly (ghost/outline style) that, when clicked, shows a sweet inline message like 'That means everything to me. ❤️'. Apply fade-in scroll animation to the section.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-final-section-as-the-closing-of-the-page-display-the-large-glowing-text-taibaa-i-choose-you-again-every-single-day-centered-in-the-serif-font-with-champagne-gold-color-and-a-pulsing-glow-css-animation-text-shadow-cycling-through-gold-tones-below-it-display-forever-yours-zeeshan-khan-in-the-script-font-in-blush-pink-add-a-soft-heart-glow-animation-a-large-semi-transparent-heart-graphic-svg-or-emoji-that-pulses-with-a-glowing-aura-in-deep-maroon-blush-tones-in-the-background-of-this-section-the-background-should-be-near-black-or-very-deep-maroon-for-dramatic-contrast",
+      "title": "Implement a Final Section as the closing of the page. Display the large glowing text 'Taibaa, I Choose You. Again. Every Single Day.' centered, in the serif font with champagne gold color and a pulsing glow CSS animation (text-shadow cycling through gold tones). Below it display 'Forever Yours, / Zeeshan Khan ❤️' in the script font in blush pink. Add a soft heart glow animation — a large semi-transparent heart graphic (SVG or emoji) that pulses with a glowing aura in deep maroon/blush tones in the background of this section. The background should be near-black or very deep maroon for dramatic contrast.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-all-generated-static-image-assets-from-frontend-public-assets-generated-in-the-appropriate-sections-hero-candlelight-dim-1920x1080-jpg-as-the-hero-section-background-rose-bg-dim-1920x1080-jpg-as-the-love-letter-section-background",
+      "title": "Render all generated static image assets from frontend/public/assets/generated in the appropriate sections: hero-candlelight.dim_1920x1080.jpg as the Hero section background, rose-bg.dim_1920x1080.jpg as the Love Letter section background.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Hero section with candlelight background, heading 'To My Beautiful Wife, Taibaa ❤️', subheading, and 'Open My Heart' button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Apology section with emotional text and fade-in scroll animation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Photo gallery grid with 8 placeholders, hover captions, and labeled upload slots",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Poetic love letter section with soft rose-blur background",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Shayari & love quotes section with animated elegant typography",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Dinner invitation section with date (28/03/2026), location (Nagpur), animated 'Yes ❤️' button, and 'I Already Forgive You' button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Final section with glowing text 'Taibaa, I Choose You. Again. Every Single Day.' and heart glow animation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Design system: deep maroon/blush pink/champagne gold/soft beige palette, serif + handwritten script fonts, glowing light effects, smooth scroll animations, floating heart particles, mobile-first responsive",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Romantic instrumental background music with toggle button",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Taibaa & Zeeshan Romantic Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

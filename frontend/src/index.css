@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Great+Vibes&family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Romantic palette */
+    --maroon: oklch(0.28 0.09 10);
+    --maroon-deep: oklch(0.18 0.07 10);
+    --maroon-light: oklch(0.38 0.10 12);
+    --blush: oklch(0.82 0.07 10);
+    --blush-light: oklch(0.92 0.04 10);
+    --gold: oklch(0.76 0.10 75);
+    --gold-light: oklch(0.86 0.08 75);
+    --beige: oklch(0.96 0.02 75);
+    --beige-warm: oklch(0.93 0.03 60);
+
+    /* Shadcn tokens mapped to romantic palette */
+    --background: 0.96 0.02 75;
+    --foreground: 0.22 0.06 10;
+    --card: 0.98 0.01 60;
+    --card-foreground: 0.22 0.06 10;
+    --popover: 0.98 0.01 60;
+    --popover-foreground: 0.22 0.06 10;
+    --primary: 0.28 0.09 10;
+    --primary-foreground: 0.96 0.02 75;
+    --secondary: 0.92 0.04 10;
+    --secondary-foreground: 0.28 0.09 10;
+    --muted: 0.93 0.03 60;
+    --muted-foreground: 0.50 0.05 10;
+    --accent: 0.76 0.10 75;
+    --accent-foreground: 0.18 0.07 10;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.88 0.04 10;
+    --input: 0.88 0.04 10;
+    --ring: 0.76 0.10 75;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.96 0.02 75;
+    --sidebar-foreground: 0.22 0.06 10;
+    --sidebar-primary: 0.28 0.09 10;
+    --sidebar-primary-foreground: 0.96 0.02 75;
+    --sidebar-accent: 0.92 0.04 10;
+    --sidebar-accent-foreground: 0.28 0.09 10;
+    --sidebar-border: 0.88 0.04 10;
+    --sidebar-ring: 0.76 0.10 75;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .font-serif-romantic {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+
+  .font-dancing {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .text-gold {
+    color: var(--gold);
+  }
+
+  .text-maroon {
+    color: var(--maroon);
+  }
+
+  .text-blush {
+    color: var(--blush);
+  }
+
+  .text-beige {
+    color: var(--beige);
+  }
+
+  .bg-maroon {
+    background-color: var(--maroon);
+  }
+
+  .bg-maroon-deep {
+    background-color: var(--maroon-deep);
+  }
+
+  .bg-blush {
+    background-color: var(--blush);
+  }
+
+  .bg-gold {
+    background-color: var(--gold);
+  }
+
+  .bg-beige {
+    background-color: var(--beige);
+  }
+
+  .glow-gold {
+    text-shadow:
+      0 0 20px oklch(0.76 0.10 75 / 0.8),
+      0 0 40px oklch(0.76 0.10 75 / 0.5),
+      0 0 80px oklch(0.76 0.10 75 / 0.3);
+  }
+
+  .glow-blush {
+    text-shadow:
+      0 0 20px oklch(0.82 0.07 10 / 0.8),
+      0 0 40px oklch(0.82 0.07 10 / 0.5);
+  }
+
+  .glow-maroon-box {
+    box-shadow:
+      0 0 30px oklch(0.28 0.09 10 / 0.4),
+      0 0 60px oklch(0.28 0.09 10 / 0.2);
+  }
+
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+
+  .fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+  }
+}
+
+/* Floating hearts animation */
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(0.8) rotate(-10deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.1) rotate(10deg);
+    opacity: 0;
+  }
+}
+
+/* Pulsing glow for final section */
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 20px oklch(0.76 0.10 75 / 0.8),
+      0 0 40px oklch(0.76 0.10 75 / 0.5),
+      0 0 80px oklch(0.76 0.10 75 / 0.3);
+  }
+  50% {
+    text-shadow:
+      0 0 30px oklch(0.86 0.08 75 / 1),
+      0 0 60px oklch(0.76 0.10 75 / 0.8),
+      0 0 100px oklch(0.76 0.10 75 / 0.5),
+      0 0 140px oklch(0.82 0.07 10 / 0.3);
+  }
+}
+
+@keyframes heartPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.15;
+    filter: blur(2px);
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.25;
+    filter: blur(1px);
+  }
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.15); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.1); }
+  70% { transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes fadeInHero {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1) rotate(180deg); }
+}
+
+@keyframes burstHeart {
+  0% { transform: translate(0, 0) scale(1); opacity: 1; }
+  100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-heart-pulse {
+  animation: heartPulse 4s ease-in-out infinite;
+}
+
+.animate-heartbeat {
+  animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+.animate-hero-in {
+  animation: fadeInHero 1.2s ease forwards;
+}
+
+.animate-hero-in-delay {
+  animation: fadeInHero 1.2s ease 0.4s forwards;
+  opacity: 0;
+}
+
+.animate-hero-in-delay-2 {
+  animation: fadeInHero 1.2s ease 0.8s forwards;
+  opacity: 0;
+}
+
+/* Decorative ornament */
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.ornament::before,
+.ornament::after {
+  content: '';
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, oklch(0.76 0.10 75 / 0.6), transparent);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.18 0.07 10);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.76 0.10 75 / 0.5);
+  border-radius: 3px;
+}
